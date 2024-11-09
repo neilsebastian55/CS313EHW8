@@ -123,6 +123,7 @@ class Keyboard:
               and arranged to match a typical keyboard layout.
         """
         keyboard_str = []
+        keyboard_str = []
         for i, row in enumerate(self.rows):
             spacing = " " * i
             row_str = spacing + " ".join(color_word(self.colors[letter], letter) for letter in row)
