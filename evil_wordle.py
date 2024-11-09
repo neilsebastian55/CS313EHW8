@@ -123,9 +123,9 @@ class Keyboard:
               and arranged to match a typical keyboard layout.
         """
         keyboard_str = []
-        keyboard_str = []
         for i, row in enumerate(self.rows):
-            spacing = " " * i
+            # Adjusting the spacing for each row: 0 spaces for the first row, 1 for the second, 3 for the third
+            spacing = " " * (i + (i == 2))
             row_str = spacing + " ".join(color_word(self.colors[letter], letter) for letter in row)
             keyboard_str.append(row_str)
         return "\n".join(keyboard_str)
